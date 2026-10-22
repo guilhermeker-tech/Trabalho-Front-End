@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONG Verde Vida</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header>
+    <h1>ONG Verde Vida</h1>
+
+    <div class="botoes" aria-label="Recursos de acessibilidade" role="group">
+      <button type="button" onclick="mudarFonte(2)" aria-label="Aumentar tamanho da fonte">A+</button>
+      <button type="button" onclick="mudarFonte(-2)" aria-label="Diminuir tamanho da fonte">A-</button>
+      <button type="button" onclick="altoContraste()">Alto contraste</button>
+    </div>
+
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="#sobre">Sobre nós</a></li>
+        <li><a href="#projetos">Nossos projetos</a></li>
+        <li><a href="#contato">Fale conosco</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+
+    <section id="sobre">
+      <h2>Sobre nós</h2>
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' fill='%23d8f0d8'/%3E%3Crect x='55' y='60' width='10' height='45' fill='%236b4423'/%3E%3Ccircle cx='60' cy='45' r='30' fill='%232e7d32'/%3E%3C/svg%3E"
+           alt="Desenho de uma árvore verde com tronco marrom">
+      <p>A Verde Vida é uma ONG que cuida do meio ambiente. Plantamos árvores, limpamos praças e ensinamos crianças a cuidar da natureza.</p>
+    </section>
+
+    <section id="projetos">
+      <h2>Nossos projetos</h2>
+
+      <article>
+        <h3>Plante uma árvore</h3>
+        <p>Plantio de mudas em ruas e parques da cidade.</p>
+      </article>
+
+      <article>
+        <h3>Escola verde</h3>
+        <p>Aulas sobre reciclagem e meio ambiente nas escolas.</p>
+      </article>
+
+      <p><a href="#contato">Saiba como ser voluntário no formulário de contato</a></p>
+    </section>
+
+    <section id="contato">
+      <h2>Fale conosco</h2>
+      <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+
+        <button type="submit">Enviar mensagem</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>ONG Verde Vida - Trabalho de acessibilidade web</p>
+  </footer>
+
+  <script>
+    var tamanho = 18;
+
+    function mudarFonte(valor) {
+      tamanho = tamanho + valor;
+      if (tamanho < 14) tamanho = 14;
+      if (tamanho > 30) tamanho = 30;
+      document.body.style.fontSize = tamanho + "px";
+    }
+
+    function altoContraste() {
+      document.body.classList.toggle("contraste");
+    }
+  </script>
+
+</body>
+</html>
